@@ -1,3 +1,21 @@
+// --- Age Verification Modal ---
+window.addEventListener("load", () => {
+  const modal = document.getElementById("ageModal");
+  const yesBtn = document.getElementById("ageYes");
+  const noBtn = document.getElementById("ageNo");
+
+  // Mostrar modal siempre al cargar
+  modal.style.display = "flex";
+
+  yesBtn.addEventListener("click", () => {
+    modal.style.display = "none"; // entra al sitio
+  });
+
+  noBtn.addEventListener("click", () => {
+    document.body.innerHTML = "<h2 style='text-align:center; margin-top: 50px;'>You must be 18+ to enter this site.</h2>";
+  });
+});
+
 // --- Navegación por secciones ---
 document.querySelectorAll('[data-section]').forEach(btn => {
   btn.addEventListener('click', e => {
